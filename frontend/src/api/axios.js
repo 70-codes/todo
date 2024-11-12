@@ -1,9 +1,8 @@
 import axios from "axios";
 
-const BACKEND_URL = "http://127.0.0.1:3000/";
+const BACKEND_URL = "http://127.0.0.1:3000";
 
 const normalAxios = axios.create({
-  // baseURL: "http://147.182.201.210/",
   baseURL: BACKEND_URL,
   headers: {
     "Content-Type": "application/json",
@@ -11,7 +10,6 @@ const normalAxios = axios.create({
 });
 
 const axiosWithHeader = axios.create({
-  // baseURL: "http://147.182.201.210/",
   baseURL: BACKEND_URL,
 
   headers: {

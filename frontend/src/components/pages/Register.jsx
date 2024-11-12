@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
 import Auth from "../../components/common/auth/Auth";
+import { normalAxios } from "../../api/axios";
 
 const Register = () => {
   const {
@@ -13,7 +14,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      await new Promise((r) => setTimeout(r, 1000));
+      await normalAxios.post("api/auth/register", data);
       console.log(data);
       throw new Error();
     } catch (error) {
