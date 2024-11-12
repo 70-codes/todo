@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn-link {
+    @apply bg-sky-600 px-4 py-0.5 rounded-lg shadow-md shadow-sky-300/50 hover:saturate-150 duration-300 cursor-pointer;
+  }
+  .nav-link {
+    @apply hover:text-sky-300 hover:shadow-xl hover:shadow-sky-300/50 rounded-md hover:px-1 duration-300 cursor-pointer;
+  }
+
+  .auth-input {
+    @apply mb-6 w-full rounded-lg bg-sky-50/20 px-2 py-2 text-lg
+                font-semibold text-slate-100 outline-none focus:bg-sky-100/20 
+                focus:shadow-lg focus:shadow-sky-400/55 bg-opacity-70;
+  }
+
+  .auth-btn {
+    @apply mt-2 rounded-lg bg-gradient-to-tr from-sky-300 via-sky-400
+              to-sky-700 px-6 py-2 font-mono font-semibold transition-all 
+                duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-sky-400;
+  }
+
+  .auth-form {
+    @apply mx-auto flex w-80 flex-col rounded-xl border-none bg-gradient-to-br
+                from-sky-950/15 to-sky-900/15 p-4 shadow-xl shadow-sky-300/35
+                  backdrop-blur-md bg-opacity-30;
+  }
+}
